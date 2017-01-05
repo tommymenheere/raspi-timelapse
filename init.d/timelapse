@@ -18,7 +18,7 @@
 PATH=/sbin:/usr/sbin:/bin:/usr/bin
 DESC="Timelapse service"
 NAME=timelapse
-DAEMON=/home/pi/bin/timelapse.sh
+DAEMON=/home/pi/raspi-timelapse/bin/timelapse.sh
 DAEMON_ARGS=""
 PIDFILE=/var/run/$NAME.pid
 SCRIPTNAME=/etc/init.d/$NAME
