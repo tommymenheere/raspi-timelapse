@@ -1,5 +1,5 @@
 # raspi-timelapse
-Raspberry Pi timelapse toolset
+Raspberry Pi timelapse toolset. This simple tool creates a screenshot every 10 seconds and copies it (using `scp`) to a defined location on a host.
 
 # Prequisites
 Make sure the camera module is enabled with `sudo raspi-config`.
@@ -22,3 +22,13 @@ Fo this, use the tool `apt-get`. Don't forget to update first: `sudo apt-get upd
     	crontab.snippet
     init.d/
     	timelapse
+
+# Install as service
+To install as a service, do the following:
+
+	sudo update-rc.d /etc/init.d/timelapse defaults
+
+The service can now be controlled using the `service` command.
+
+# Todo
+- Settings file
