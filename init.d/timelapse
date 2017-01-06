@@ -49,7 +49,7 @@ do_start()
 	start-stop-daemon --chuid pi --start --quiet  --make-pidfile --pidfile $PIDFILE --exec $DAEMON --test > /dev/null \
 		|| return 1
 	start-stop-daemon --chuid pi --start --quiet --make-pidfile --background --pidfile $PIDFILE --exec $DAEMON -- \
-		$DAEMON_ARGS >> /var/log/pi/timelapse.log 2>&1 \
+		$DAEMON_ARGS >> /var/log/timelapse.log 2>&1 \
 		|| return 2
 	# Add code here, if necessary, that waits for the process to be ready
 	# to handle requests from services started subsequently which depend

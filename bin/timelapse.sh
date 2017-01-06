@@ -31,12 +31,12 @@ fi
 while true ;
 do
 	DIR=$ROOT/$(date +"%Y/%m/%d")
-	
 	if ! ssh $USER@$HOST ls $DIR; then
-  		ssh $USER@$HOST mkdir -p "$DIR"
-		NEXT=0
-		echo `date +"%y%m%m %H:%M:%S"` created dir $USER@$HOST:$DIR  
+        	ssh $USER@$HOST mkdir -p "$DIR"
+        	NEXT=0
+        	echo `date +"%y%m%m %H:%M:%S"` created dir $USER@$HOST:$DIR
 	fi
+	
 	/bin/bash ${PRG_DIR}/capture.sh $DIR $NEXT 2>&1 &
 	NEXT=$(( 10#$NEXT + 1 ))
 	sleep $INTERVAL
